@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <main>
@@ -16,40 +15,23 @@
                     <button type="button" class="refresh">Refresh</button>
                 </div>
                 <ul class="leaderboard">
-                    <li>
-                        <span class="name">Praises Tula</span> :
-                        <span class="score">100</span>
-                    </li>
-                    <li>
-                        <span class="name">Praises Tula</span> :
-                        <span class="score">100</span>
-                    </li>
-                    <li>
-                        <span class="name">Praises Tula</span> :
-                        <span class="score">100</span>
-                    </li>
-                    <li>
-                        <span class="name">Praises Tula</span> :
-                        <span class="score">100</span>
-                    </li>
+
                 </ul>
 
             </div>
             <div class="add-scores-container">
                 <h2>Add Scores</h2>
-                <form id="add-scores" actionmethod="post">
+                <form id="add-scores">
                     <div>
-                        <input type="text" name="name" placeholder="Your name"  required>
+                        <input type="text" name="name" class="name" placeholder="Your name"  required>
                     </div>
                     <div>
-                        <input type="text" name="core" placeholder="Your score"  required>
+                        <input type="text" name="core" class="score" placeholder="Your score"  required>
                     </div>
                     <div class="button-container">
                         <button type="button" class="submit">Submit</button>
                     </div>
-
                 </form>
-
             </div>
         </div>
     </main>
