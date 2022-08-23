@@ -32,6 +32,13 @@ class Board {
   saveRecord = () => {
     localStorage.setItem('leaderCatalogue', JSON.stringify(leaderCatalogue));
   }
+
+  reset = () => {
+    leaderboard.innerText = '';
+    leaderCatalogue.splice(0, leaderCatalogue.length);
+    this.saveRecord();
+    this.render();
+  }
 }
 
 export default Board;
