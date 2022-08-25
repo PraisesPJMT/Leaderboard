@@ -78,6 +78,19 @@ ul li:nth-child(even) {
   margin-top: 0.3rem;
 }
 
+.addleader-message {
+  display: none;
+  font-style: italic;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
 form {
   width: 100%;
   display: flex;
