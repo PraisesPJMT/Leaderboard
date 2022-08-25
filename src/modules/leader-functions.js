@@ -1,43 +1,19 @@
-import generateLeader from './leader-creations.js';
-
-const leaderboard = document.querySelector('.leaderboard');
-const leaderCatalogue = JSON.parse(localStorage.getItem('leaderCatalogue')) || [];
-
 class Board {
-  constructor(name, score) {
-    this.name = name;
-    this.score = score;
-  }
-
   addLeader = () => {
     const name = document.querySelector('.name').value;
     const score = Number(document.querySelector('.score').value);
-    const id = leaderCatalogue.length + 1;
     if (name.length > 1 && score) {
-      leaderCatalogue.push({ name, score, id });
       document.querySelector('.name').value = '';
       document.querySelector('.score').value = '';
-      this.render();
-      this.saveRecord();
     }
   }
 
-  render = () => {
-    leaderboard.innerText = '';
-    leaderCatalogue.forEach((leader) => {
-      leaderboard.appendChild(generateLeader(leader.name, leader.score));
-    });
-  };
+  reset = async () => {
+    const requestURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ncOyTNzzO044sLTLb55e/scores/';
+    const request = new Request(requestURL);
 
-  saveRecord = () => {
-    localStorage.setItem('leaderCatalogue', JSON.stringify(leaderCatalogue));
-  }
-
-  reset = () => {
-    leaderboard.innerText = '';
-    leaderCatalogue.splice(0, leaderCatalogue.length);
-    this.saveRecord();
-    this.render();
+    const response = await fetch(request);
+    return response;
   }
 }
 
