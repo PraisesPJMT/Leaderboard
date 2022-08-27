@@ -15,11 +15,19 @@ body,
 
 h1 {
   text-align: center;
+  color: #5c6e58;
+  padding: 1em 0;
 }
 
 h2 {
   text-align: center;
   padding: 0.5rem 0;
+  color: #5c6e58;
+}
+
+body {
+  background-color: #e1e2e2;
+  color: #f2d349;
 }
 
 .leaderboard-container {
@@ -60,22 +68,26 @@ h2 {
 }
 
 .leaderboard li:nth-child(even) {
-  background: #eee;
+  background: #8aa899;
 }
 
 .leaderboard .leaderboard-header {
-  background: #aaa;
+  background: #5c6e58;
   font-weight: bold;
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .leaderboard .leaderboard-message {
-  background: #eee;
+  background: #8aa899;
   border-radius: 0 0 0.5rem 0.5rem;
   text-align: center;
   grid-template-columns: 1fr;
   font-style: italic;
   margin-top: 0.3rem;
+}
+
+.leader {
+  color: #5c6e58;
 }
 
 .addleader-message {
@@ -102,6 +114,15 @@ h2 {
   width: 100%;
   padding: 0.5rem;
   font-size: 1rem;
+  color: #5c6e58;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.input:focus {
+  border: none;
+  outline: none;
+  background: #f2f2f2;
 }
 
 .button {
@@ -110,9 +131,16 @@ h2 {
   width: 90px;
   box-shadow: 3px 3px 6px rgba(50, 50, 50, 0.5);
   font-size: 1rem;
+  color: #5c6e58;
+  border-radius: 15px;
+  border: none;
 }
 
 .button-container {
   display: flex;
   justify-content: end;
+}
+
+.hide {
+  display: none;
 }
